@@ -1,79 +1,94 @@
-# Welcome to React Router!
+# Fikri Alwan Ramadhan — Portfolio
 
-A modern, production-ready template for building full-stack React applications using React Router.
+Personal portfolio website built with React Router v7, Tailwind CSS v4, and Cloudflare.
 
-## Features
+## Design
 
-- 🚀 Server-side rendering
-- ⚡️ Hot Module Replacement (HMR)
-- 📦 Asset bundling and optimization
-- 🔄 Data loading and mutations
-- 🔒 TypeScript by default
-- 🎉 TailwindCSS for styling
-- 📖 [React Router docs](https://reactrouter.com/)
+Neubrutalism aesthetic with:
+- Thick 3px black borders
+- 8px offset box shadows
+- Pink accent (#FF2D55)
+- Cream background (#FFEBE6)
+- Space Grotesk typography
+
+## Tech Stack
+
+- **Framework**: React Router v7 (Cloudflare)
+- **Styling**: Tailwind CSS v4
+- **Font**: Space Grotesk (Google Fonts)
+- **Deployment**: Cloudflare Workers
+
+## Sections
+
+1. **Hero** — Name, title, bio, contact links, portrait
+2. **Experience** — Timeline with 4 work experiences
+3. **Projects** — 4 community/project cards (GDG Bandung, BandungDev, DevFest, IOX)
+4. **Technologies** — Tech stack grid (Languages, State, Backend, Tools)
+5. **Get In Touch** — CTA with email/LinkedIn/GitHub
+6. **Footer** — Copyright, education, social links
+
+## Project Structure
+
+```
+app/
+├── app.css              # Tailwind + CSS variables
+├── root.tsx             # Root layout + fonts
+├── routes/
+│   └── home.tsx         # Home page
+└── components/
+    ├── ui/
+    │   ├── Button.tsx   # Button component
+    │   └── Tag.tsx      # Tag/pill component
+    └── sections/
+        ├── HeroSection.tsx
+        ├── ExperienceSection.tsx
+        ├── ProjectsSection.tsx
+        ├── TechnologiesSection.tsx
+        ├── GetInTouchSection.tsx
+        └── Footer.tsx
+```
+
+## Color Variables
+
+| Variable | Value | Usage |
+|----------|-------|-------|
+| `--color-primary` | #FF2D55 | Pink accent |
+| `--color-cream` | #FFEBE6 | Hero bg |
+| `--color-dark` | #1B1B1B | Text |
+| `--color-muted` | #4C4546 | Secondary text |
+| `--color-gray` | #EEEEEE | Section headers |
+| `--color-bg-light` | #F9F9F9 | Cards bg |
+| `--color-bg-dark` | #F4F4F4 | Alternate bg |
 
 ## Getting Started
 
-### Installation
-
-Install the dependencies:
-
 ```bash
-npm install
+# Install dependencies
+pnpm install
+
+# Start dev server
+pnpm dev
+
+# Build for production
+pnpm build
+
+# Deploy to Cloudflare
+pnpm deploy
 ```
 
-### Development
+## Portfolio Content
 
-Start the development server with HMR:
+- **Name**: Fikri Alwan Ramadhan
+- **Title**: Frontend Engineer
+- **Location**: Jakarta, Indonesia
+- **Email**: fikrial93@gmail.com
+- **Phone**: 089516269950
 
-```bash
-npm run dev
-```
+### Experience
+- **Advance Intelligence Group** — Frontend Engineer (Dec 2025–Present)
+- **PT. Shell Infotech** — Frontend Developer (Nov 2022–Nov 2025)
+- **PT. Netta Code Indonesia** — Mobile Developer (Sept 2021–Oct 2022)
+- **Bersihberes** — Mobile Developer (June 2020–Jan 2021)
 
-Your application will be available at `http://localhost:5173`.
-
-## Previewing the Production Build
-
-Preview the production build locally:
-
-```bash
-npm run preview
-```
-
-## Building for Production
-
-Create a production build:
-
-```bash
-npm run build
-```
-
-## Deployment
-
-Deployment is done using the Wrangler CLI.
-
-To build and deploy directly to production:
-
-```sh
-npm run deploy
-```
-
-To deploy a preview URL:
-
-```sh
-npx wrangler versions upload
-```
-
-You can then promote a version to production after verification or roll it out progressively.
-
-```sh
-npx wrangler versions deploy
-```
-
-## Styling
-
-This template comes with [Tailwind CSS](https://tailwindcss.com/) already configured for a simple default starting experience. You can use whatever CSS framework you prefer.
-
----
-
-Built with ❤️ using React Router.
+### Education
+S.Kom. Computer Software Engineering, Tanjungpura University (2016–2022)

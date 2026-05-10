@@ -1,17 +1,27 @@
 import type { Route } from "./+types/home";
-import { Welcome } from "../welcome/welcome";
+import { HeroSection } from "../components/sections/HeroSection";
+import { ExperienceSection } from "../components/sections/ExperienceSection";
+import { ProjectsSection } from "../components/sections/ProjectsSection";
+import { TechnologiesSection } from "../components/sections/TechnologiesSection";
+import { GetInTouchSection } from "../components/sections/GetInTouchSection";
+import { Footer } from "../components/sections/Footer";
 
 export function meta({}: Route.MetaArgs) {
   return [
-    { title: "New React Router App" },
-    { name: "description", content: "Welcome to React Router!" },
+    { title: "Fikri Alwan Ramadhan — Frontend Engineer" },
+    { name: "description", content: "Frontend Engineer specializing in Flutter, React, and Next.js. Based in Jakarta, Indonesia." },
   ];
 }
 
-export function loader({ context }: Route.LoaderArgs) {
-  return { message: context.cloudflare.env.VALUE_FROM_CLOUDFLARE };
-}
-
-export default function Home({ loaderData }: Route.ComponentProps) {
-  return <Welcome message={loaderData.message} />;
+export default function Home() {
+  return (
+    <main className="min-h-screen font-sans">
+      <HeroSection />
+      <ExperienceSection />
+      <ProjectsSection />
+      <TechnologiesSection />
+      <GetInTouchSection />
+      <Footer />
+    </main>
+  );
 }
