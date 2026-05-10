@@ -34,7 +34,7 @@ export function GetInTouchSection() {
   return (
     <section className="bg-primary relative overflow-hidden">
       {/* Gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-br from-black/20 to-transparent opacity-30" />
+      <div className="absolute inset-0 bg-linear-to-br from-black/20 to-transparent opacity-30" />
 
       <div className="relative z-10 px-6 md:px-16 lg:px-32 py-16 md:py-24 lg:py-32 flex flex-col items-center">
         {/* Heading */}
@@ -47,7 +47,7 @@ export function GetInTouchSection() {
               SOMETHING
             </span>
             <div
-              className="bg-white border-[4px] border-black px-4 md:px-6 py-2 inline-block rotate-1"
+              className="bg-white border-4 border-black px-4 md:px-6 py-2 inline-block rotate-1"
               style={{ boxShadow: '6px 6px 0 var(--color-black)' }}
             >
               <span className="text-3xl md:text-5xl lg:text-[80px] leading-[0.9] tracking-tight font-medium text-black">

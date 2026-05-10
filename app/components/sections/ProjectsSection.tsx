@@ -90,7 +90,7 @@ function ProjectCard({ project }: { project: Project }) {
       href={project.url}
       target="_blank"
       rel="noopener noreferrer"
-      className="bg-white border-[4px] border-black p-4 md:p-8 block"
+      className="bg-white border-4 border-black p-4 md:p-8 block"
       style={{ boxShadow: '4px 4px 0 var(--color-black)' }}
     >
       <div className="mb-4 md:mb-6">

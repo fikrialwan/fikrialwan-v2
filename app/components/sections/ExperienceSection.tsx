@@ -5,6 +5,7 @@ interface Experience {
   role: string;
   period: string;
   description: string;
+  details: string;
   tech: string[];
   isCurrent?: boolean;
 }
@@ -61,7 +62,7 @@ function ExperienceCard({ experience, index }: { experience: Experience; index: 
     >
       {/* Timeline dot */}
       <div
-        className={`hidden md:block absolute w-6 h-6 rounded-full border-[3px] border-black -left-[48px] top-12 ${
+        className={`hidden md:block absolute w-6 h-6 rounded-full border-[3px] border-black -left-12 top-12 ${
           experience.isCurrent ? 'bg-primary' : 'bg-white'
         }`}
       />
@@ -120,12 +121,12 @@ export function ExperienceSection() {
       {/* Timeline */}
       <div className="flex flex-col md:flex-row">
         {/* Timeline line */}
-        <div className="hidden md:flex w-[106px] relative justify-center">
-          <div className="w-[3px] bg-black h-full" />
+        <div className="hidden md:flex w-26.5 relative justify-center">
+          <div className="w-0.75 bg-black h-full" />
         </div>
 
         {/* Cards */}
-        <div className="flex-1 bg-bg-light p-4 md:p-16 space-y-6 md:space-y-12">
+        <div className="flex-1 bg-bg-light p-4 md:p-16 space-y-6 md:space-y-12 md:border-l-[3px] border-black">
           {experiences.map((exp, index) => (
             <ExperienceCard key={exp.company} experience={exp} index={index} />
           ))}
