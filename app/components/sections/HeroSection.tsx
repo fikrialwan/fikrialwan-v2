@@ -76,7 +76,7 @@ export function HeroSection() {
             <div className="bg-white border-[3px] border-black p-4 rotate-[-3deg]" style={{ boxShadow: '12px 12px 0 var(--color-black)' }}>
               <div className="w-[400px] h-[450px] overflow-hidden flex items-center justify-center">
                 <img
-                  src="https://fikrialwan.com/static/media/profile.f1b0fa8d5ae3f753bb18.webp"
+                  src="/profile.webp"
                   alt="Fikri Alwan Ramadhan"
                   className="w-full h-full object-cover"
                 />
