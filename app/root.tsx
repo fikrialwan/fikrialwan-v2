@@ -21,14 +21,36 @@ export const links: Route.LinksFunction = () => [
     rel: "stylesheet",
     href: "https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap",
   },
+  { rel: "icon", type: "image/svg+xml", href: "/favicon.svg" },
+  { rel: "icon", type: "image/png", href: "/favicon-32x32.png", sizes: "32x32" },
+  { rel: "icon", type: "image/png", href: "/favicon-96x96.png", sizes: "96x96" },
+  { rel: "shortcut icon", href: "/favicon.ico" },
+  { rel: "apple-touch-icon", sizes: "180x180", href: "/apple-touch-icon.png" },
+  { rel: "manifest", href: "/site.webmanifest" }
+];
+
+export const meta: Route.MetaFunction = () => [
+  { title: "Fikri Alwan Ramadhan — Frontend Engineer" },
+  { name: "description", content: "Frontend Engineer specializing in Flutter, React, and Next.js. Based in Jakarta, Indonesia." },
+  { name: "viewport", content: "width=device-width, initial-scale=1" },
+  { name: "apple-mobile-web-app-title", content: "Fikri Alwan Ramadhan" },
+  { name: "twitter:card", content: "summary_large_image" },
+  { name: "twitter:site", content: "@fikrialwan" },
+  { name: "twitter:title", content: "Fikri Alwan Ramadhan — Frontend Engineer" },
+  { name: "twitter:description", content: "Frontend Engineer specializing in Flutter, React, and Next.js. Based in Jakarta, Indonesia." },
+  { name: "twitter:image", content: "/favicon-96x96.png" },
+  { name: "og:title", content: "Fikri Alwan Ramadhan — Frontend Engineer" },
+  { name: "og:description", content: "Frontend Engineer specializing in Flutter, React, and Next.js. Based in Jakarta, Indonesia." },
+  { name: "og:image", content: "/favicon-96x96.png" },
+  { name: "og:url", content: "https://fikrialwan.com" },
+  { name: "og:type", content: "website" },
+  { charSet: "utf-8" },
 ];
 
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
       <head>
-        <meta charSet="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <Meta />
         <Links />
       </head>
